@@ -1,30 +1,27 @@
-package javaMetodoakAriketak;
+package Apustuak;
 
 import java.util.Scanner;
 import java.util.Random;
 
-public class metodoakariketak1 {
+public class Euromillones {
+	Scanner sc = new Scanner(System.in);
+	 
+	 int euromilloi[] = new int[5];
+	 int euromilloiIzarrak[] = new int[2];
+	 int euromilloiizarerantzunak[] = new int[2];
+	 int euromilloierantzunak[] = new int[5];
+	 Random random = new Random();
+	 int i;
+	 int j;
+	 int x;
+	 int y;
+	 int zenbasmatu;
+	 int izarasmatu;
+	 int zenb1;
+	 int zenb2;	
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		 System.out.println("Euromillones");
-		 int euromilloi[];
-		 euromilloi = new int[5];
-		 int euromilloiIzarrak[];
-		 euromilloiIzarrak = new int[2];
-		 int euromilloiizarerantzunak[];
-		 euromilloiizarerantzunak = new int[2];
-		 int euromilloierantzunak[];
-		 euromilloierantzunak = new int[5];
-		 Random random = new Random();
-		 int i;
-		 int j;
-		 int x;
-		 int y;
-		 int zenbasmatu;
-		 int izarasmatu;
-		 int zenb1;
-		 int zenb2;	 
+	public void EuromilloiaExekutatu() {
+		System.out.println("Euromillones");
 		 
 		 
 		for(i=0;i<5;i++) {
