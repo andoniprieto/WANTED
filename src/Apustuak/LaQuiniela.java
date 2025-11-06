@@ -1,9 +1,9 @@
-package javaAriketak;
+package Apustuak;
 import java.util.Random; //IA
 import java.util.Scanner;
 
 public class LaQuiniela {
-    public static void main(String[] args) {
+    public void laQuinielaExekutatu() {
         Scanner sc = new Scanner(System.in);
         Random rnd = new Random(); //IA: Zenbaki aleatorioak generatuko ditu.
 
@@ -77,6 +77,5 @@ public class LaQuiniela {
         } else {
             System.out.println("Ez duzu saririk lortu.");
         }
-        sc.close();
     }
 }

@@ -27,7 +27,8 @@ primitiva.primitivaExekutatu();
 break;
 
 case 2:
-System.out.println("Exekutatu La Quiniela programa");
+LaQuiniela laQuiniela = new LaQuiniela();
+laQuiniela.laQuinielaExekutatu();
 break;
 
 case 3:

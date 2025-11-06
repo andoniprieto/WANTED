@@ -1,28 +1,25 @@
-package ariketak;
+package Apustuak;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class Primitiva {
-
-	public static void main(String[] args) {
+	Scanner sc = new Scanner (System.in);
+	
+	int reint;
+	int kontIrab=0;
+	int zenbComp;
+	int i;
+	int j;
+	int sartutakoZenbakia;
+	int reintErab;
+	boolean konplementarioa = false;
+	
+	Random random = new Random();
+	int PrimiEmaitza[] = new int[6];
+	
+	public void primitivaExekutatu() {
 		// TODO Auto-generated method stub
-		
-		Scanner sc = new Scanner (System.in);
-		
-		int reint;
-		int kontIrab=0;
-		int zenbComp;
-		int i;
-		int j;
-		int sartutakoZenbakia;
-		int reintErab;
-		boolean konplementarioa = false;
-		
-		Random random = new Random();
-		int PrimiEmaitza[];
-		PrimiEmaitza = new int[6];
-		
 		for (i = 0; i < 6; i++) {
 	            int zenb;
 	            boolean errepikatuta;
@@ -122,10 +119,7 @@ public class Primitiva {
 	        } while (reintErab < 0 || reintErab > 9);
 
 
-	        System.out.print("Irten den reintegro zenbakia "+reintErab+ " da");
-			
-	        
-	        //break;
+	        System.out.println("Irten den reintegro zenbakia "+reintErab+ " da");
 	        
 	        boolean irabaziDu = false;
 
@@ -150,7 +144,7 @@ public class Primitiva {
 	        }
 	        
 	        if (!irabaziDu) {
-	            System.out.println("\nEz duzu saririk lortu. Saiatu berriro!");
+	            System.out.println("Ez duzu saririk lortu. Saiatu berriro!");
 	        }
 
 	}
