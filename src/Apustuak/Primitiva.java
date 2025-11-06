@@ -1,28 +1,24 @@
-package ariketak;
+package Apustuak;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class Primitiva {
+	Scanner sc = new Scanner (System.in);
+	
+	int reint;
+	int kontIrab=0;
+	int zenbComp;
+	int i;
+	int j;
+	int sartutakoZenbakia;
+	int reintErab;
+	boolean konplementarioa = false;
+	
+	Random random = new Random();
+	int PrimiEmaitza[] = PrimiEmaitza = new int[6];
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		Scanner sc = new Scanner (System.in);
-		
-		int reint;
-		int kontIrab=0;
-		int zenbComp;
-		int i;
-		int j;
-		int sartutakoZenbakia;
-		int reintErab;
-		boolean konplementarioa = false;
-		
-		Random random = new Random();
-		int PrimiEmaitza[];
-		PrimiEmaitza = new int[6];
-		
+	public void primitivaExekutatu() {
 		for (i = 0; i < 6; i++) {   
 			PrimiEmaitza[i] = random.nextInt(49) + 1;
 			
