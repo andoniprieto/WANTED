@@ -22,7 +22,8 @@ System.out.println("Programa amaitu da");
 break;
 
 case 1:
-System.out.println("Exekutatu Primitva programa");
+Primitiva primitiva = new Primitiva();
+primitiva.primitivaExekutatu();
 break;
 
 case 2:
@@ -31,7 +32,7 @@ break;
 
 case 3:
 Euromillones euromillonea = new Euromillones();
-euromillonea.EuromilloiaExekutatu();
+euromillonea.euromilloiaExekutatu();
 break;
 
 default: System.out.println("Zenbaki desegokia, sartu zenbaki balioduna (0-3)");

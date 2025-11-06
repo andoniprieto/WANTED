@@ -20,7 +20,7 @@ public class Euromillones {
 	 int zenb1;
 	 int zenb2;	
 
-	public void EuromilloiaExekutatu() {
+	public void euromilloiaExekutatu() {
 		System.out.println("Euromillones");
 		 
 		 
