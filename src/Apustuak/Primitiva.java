@@ -1,30 +1,46 @@
-package Apustuak;
+package ariketak;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class Primitiva {
-	Scanner sc = new Scanner (System.in);
-	
-	int reint;
-	int kontIrab=0;
-	int zenbComp;
-	int i;
-	int j;
-	int sartutakoZenbakia;
-	int reintErab;
-	boolean konplementarioa = false;
-	
-	Random random = new Random();
-	int PrimiEmaitza[] = PrimiEmaitza = new int[6];
 
-	public void primitivaExekutatu() {
-		for (i = 0; i < 6; i++) {   
-			PrimiEmaitza[i] = random.nextInt(49) + 1;
-			
-			
-		}
-	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner (System.in);
+		
+		int reint;
+		int kontIrab=0;
+		int zenbComp;
+		int i;
+		int j;
+		int sartutakoZenbakia;
+		int reintErab;
+		boolean konplementarioa = false;
+		
+		Random random = new Random();
+		int PrimiEmaitza[];
+		PrimiEmaitza = new int[6];
+		
+		for (i = 0; i < 6; i++) {
+	            int zenb;
+	            boolean errepikatuta;
+	            do {
+	                zenb = random.nextInt(49) + 1;
+	                errepikatuta = false;
+	                for (j = 0; j < i; j++) {
+	                    if (PrimiEmaitza[j] == zenb) {
+	                        errepikatuta = true;
+	                        break;
+	                    }
+	                }
+	            } while (errepikatuta);
+	            PrimiEmaitza[i] = zenb;
+	        }
+
+		
+		
 		int ErabiltzailePredik[];
 		ErabiltzailePredik = new int[6];
 	
@@ -34,15 +50,15 @@ public class Primitiva {
 			System.out.println("Sartu ezazu zenbaki bat (1-49):");
 			sartutakoZenbakia = sc.nextInt();	
 			if (sartutakoZenbakia <= 49 && sartutakoZenbakia  >= 1){
-				boolean errepikatuta = false;
+				boolean errepikatu = false;
 				for (j= 0; j < i; j++) {
                     if (ErabiltzailePredik[j] == sartutakoZenbakia) {
-                        errepikatuta = true;
+                        errepikatu = true;
                         break;
                     }
                 }
 
-                if (errepikatuta) {
+                if (errepikatu) {
                     System.out.println("Zenbakia errepikatuta dago, saiatu berriro.");
                 } else {
                     ErabiltzailePredik[j] = sartutakoZenbakia;
@@ -95,11 +111,21 @@ public class Primitiva {
 			
 			
 	        reint = random.nextInt(10);
+	        
 
-	        System.out.print("Sartu zure reintegroa (0-9): ");
-	        reintErab = sc.nextInt();
+	        do {
+	            System.out.print("Sartu zure reintegro zenbakia (0-9): ");
+	            reintErab = sc.nextInt();
+	            if (reintErab < 0 || reintErab > 9) {
+	                System.out.println(" Reintegroa 0 eta 9 artean egon behar da");
+	            }
+	        } while (reintErab < 0 || reintErab > 9);
+
+
+	        System.out.print("Irten den reintegro zenbakia "+reintErab+ " da");
+			
 	        
-	        
+	        //break;
 	        
 	        boolean irabaziDu = false;
 
@@ -122,11 +148,11 @@ public class Primitiva {
 	            System.out.println("Reintegroa asmatu duzu! Zure dirua itzultzen da.");
 	            irabaziDu = true;
 	        }
-
+	        
 	        if (!irabaziDu) {
-	            System.out.println("Ez duzu saririk lortu. Saiatu berriro!");
+	            System.out.println("\nEz duzu saririk lortu. Saiatu berriro!");
 	        }
-	sc.close();
+
 	}
 }		
 
