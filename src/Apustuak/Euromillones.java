@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Euromillones {
 	Scanner sc = new Scanner(System.in);
-	 
+	 //Aldagaiak definitu.
 	 int euromilloi[] = new int[5];
 	 int euromilloiIzarrak[] = new int[2];
 	 int euromilloiizarerantzunak[] = new int[2];
@@ -23,7 +23,8 @@ public class Euromillones {
 	public void euromilloiaExekutatu() {
 		System.out.println("Euromillones");
 		 
-		 
+
+		 //zenbakien predikzioak eskatu eta gorde egiten ditu.
 		for(i=0;i<5;i++) {
 			System.out.println("Sartu zenbaki bat 1-50 tartean");
 			zenb1 = sc.nextInt();		
@@ -35,6 +36,7 @@ public class Euromillones {
 				i--;
 			}
 		 }
+		//izarren predikzioak askatu eta gorde egiten ditu.
 		for(j=0;j<2;j++) {
 			 System.out.println("Sartu zenbaki bat 1-12 tartean");
 			 zenb2 = sc.nextInt();
@@ -46,6 +48,7 @@ public class Euromillones {
 			 j--;
 			}
 		}
+		//"for" hauek erantzunak ausaz aukeratzen eta gorde egiten ditu.
 		for (x = 0; x < 5; x++) {
 		 	euromilloierantzunak[x] = random.nextInt(50) + 1;
 		}
@@ -55,7 +58,8 @@ public class Euromillones {
 
 		zenbasmatu = 0;
 		izarasmatu = 0;
-		
+
+		//Bi "for" hauek predikzioak eta emaitzak konparatzen ditu.
 				for(i=0;i<5;i++){
 					if(euromilloierantzunak[i] == euromilloi[i]){
 						zenbasmatu++;
@@ -67,9 +71,11 @@ public class Euromillones {
 						izarasmatu++;
 						}
 				}
+		//Honek zuk asmatu duzun zenbakiak eta izarrak bistaratuko ditu.
 				System.out.println("Hauek dira zuk asmatutako zenbakiak"+zenbasmatu);
 				System.out.println("Hauek dira zuk asmatutako izarrak"+izarasmatu);
-				
+
+		//Hemendik aurrera lortu duzun sariak bistaratuko du.
 					 if(zenbasmatu == 5) {
 						switch(izarasmatu) {
 						case 2:
@@ -130,5 +136,7 @@ public class Euromillones {
 					if((zenbasmatu == 1) && (izarasmatu == 0)){
 						System.out.println("Ez duzu saririk");
 					}
+		System.out.println("----------------------------");
 			}
 	}
+
