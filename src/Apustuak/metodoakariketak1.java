@@ -40,7 +40,7 @@ public class metodoakariketak1 {
 				i--;
 			}
 		 }
-		//izarren predikzioak askatu eta gorde egiten ditu.
+		//izarren predikzioak eskatu eta gorde egiten ditu.
 		for(j=0;j<2;j++) {
 			 System.out.println("Sartu zenbaki bat 1-12 tartean");
 			 zenb2 = sc.nextInt();
@@ -143,3 +143,4 @@ public class metodoakariketak1 {
 					System.out.println("----------------------------");
 			}
 	}
+
