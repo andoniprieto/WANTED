@@ -1,4 +1,4 @@
-package ariketak;
+package Apustuak;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ public class Primitiva {
 
 	// Primitiva programa exekutatuko da.
 
-	public static void main(String[] args) {
+	public void primitivaExekutatu() {
 		// TODO Auto-generated method stub
 
 		Scanner sc = new Scanner(System.in);
