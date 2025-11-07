@@ -1,25 +1,34 @@
-package Apustuak;
+package ariketak;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class Primitiva {
-	Scanner sc = new Scanner (System.in);
+
+	//Primitiva programa exekutatuko da.
 	
-	int reint;
-	int kontIrab=0;
-	int zenbComp;
-	int i;
-	int j;
-	int sartutakoZenbakia;
-	int reintErab;
-	boolean konplementarioa = false;
-	
-	Random random = new Random();
-	int PrimiEmaitza[] = new int[6];
-	
-	public void primitivaExekutatu() {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner (System.in);
+		
+		int reint;
+		int kontIrab=0;
+		int zenbComp;
+		int i;
+		int j;
+		int sartutakoZenbakia;
+		int reintErab;
+		boolean konplementarioa = false;
+		
+		System.out.println("Hau primitiva programa da.");
+		
+		
+		//Randomarekin ausazko zenbakiak sortuko ditu
+		Random random = new Random();
+		int PrimiEmaitza[];
+		PrimiEmaitza = new int[6];
+		
 		for (i = 0; i < 6; i++) {
 	            int zenb;
 	            boolean errepikatuta;
@@ -34,14 +43,15 @@ public class Primitiva {
 	                }
 	            } while (errepikatuta);
 	            PrimiEmaitza[i] = zenb;
-	        }
-
+		}
+		
+		//Zenbaki hauek ezin dira errepikatu. 
 		
 		
 		int ErabiltzailePredik[];
 		ErabiltzailePredik = new int[6];
 	
-		
+		//Erabiltzaileak 6 zenbaki sartuko ditu 1-49ra
 		i=0;
 		while (i<6) {
 			System.out.println("Sartu ezazu zenbaki bat (1-49):");
@@ -54,7 +64,7 @@ public class Primitiva {
                         break;
                     }
                 }
-
+				//Zenbaki hauek ezin dira errepikatu.
                 if (errepikatu) {
                     System.out.println("Zenbakia errepikatuta dago, saiatu berriro.");
                 } else {
@@ -66,18 +76,21 @@ public class Primitiva {
             }
         }
 		
+		
+		//Erabiltzailearen zenbakiak bistaratzen ditu 
 		for (j=0; j<6; j++) {
 			System.out.println("Sartutako zenbakia " +ErabiltzailePredik[j]);
 		}
 		
-		System.out.println("----------------------------------------------------");
+		System.out.println("                                                                              ");
 
 		
-		
+		//Primitiva programaren zenbakiak bistaratzen ditu 
 		for (i=0; i<6; i++) {
 			System.out.println("Zenbaki aleatorioa hau da: " +PrimiEmaitza[i]);
 		}
-			
+		
+		//Zenbaki konplementarioa sortuko du
 		zenbComp= random.nextInt(49) + 1;	
 		konplementarioa = false;
 			for (i = 0; i < 6; i++) {
@@ -89,7 +102,7 @@ public class Primitiva {
 				System.out.println("Zenbaki konplementarioa hau da: "+zenbComp);	
 			
 			
-			
+			//Asmatutako zenbakiak kontatuko du
 			for (i=0; i<6; i++) {
 			for (j=0; j<6; j++) {
 				if (ErabiltzailePredik[j] == PrimiEmaitza[i]) {
@@ -99,17 +112,18 @@ public class Primitiva {
 			
 			
 	}		
-			System.out.println("--------------------------------------------------------");	
+			System.out.println("                                                                          ");	
 		
+			//Asmatutako zenbaki kopurua bistaratuko du
 			System.out.println("Asmatu dituzun zenbaki kopurua "+kontIrab+" da");	
 
 			
-			System.out.println("--------------------------------------------------------");	
+			System.out.println("                                                                          ");	
 			
-			
+			//Reintegroa sortuko du (ausaz)
 	        reint = random.nextInt(10);
 	        
-
+	        //Reintegroa 0tik 9ra sortuko du
 	        do {
 	            System.out.print("Sartu zure reintegro zenbakia (0-9): ");
 	            reintErab = sc.nextInt();
@@ -119,8 +133,9 @@ public class Primitiva {
 	        } while (reintErab < 0 || reintErab > 9);
 
 
-	        System.out.println("Irten den reintegro zenbakia "+reintErab+ " da");
-	        
+	        System.out.println("Irten den reintegro zenbakia "+reint+ " da");
+			
+	        //Asmatutako zenbakiak, konplementarioa eta reintegroa kontutan edukita, emaitz desberdinak sortuko ditu.
 	        boolean irabaziDu = false;
 
 	        if (kontIrab == 6) {
